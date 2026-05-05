@@ -59,7 +59,7 @@ body {
 }
 
 .nav-item.active { 
-    background: #4A0E0E; 
+    background-color:  #4A0E0E; 
 }
 .nav-item.active a { 
     color: #F2F4F7;
