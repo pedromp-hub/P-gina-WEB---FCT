@@ -20,9 +20,11 @@ body {
     letter-spacing: -0.02em; /* Un toque de tracking negativo queda muy pro en Bold */
 }
 
+/*------------- PORTADA ---------------*/
+
 /* --- MENÚ FLOTANTE  --- */
 .floating-nav {
-    position: fixed;
+    position: absolute;
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
@@ -104,7 +106,7 @@ body {
 
 /* --- DOCK SOCIAL INFERIOR --- */
 .social-dock {
-    position: fixed;
+    position: absolute;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
@@ -134,3 +136,6 @@ body {
     color: #4A0E0E;
     transform: translateY(-2px);
 }
+
+/*---------------- FIN PORTADA ----------------------*/
+
