@@ -12,18 +12,13 @@
 }
 
 body {
-    /* 1. Fuente principal por defecto */
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* Esto hace que todo sea Bold por defecto */
-    
-    /* 2. Tus colores seleccionados */
-    background-color: #F2F4F3; /* Blanco Humo */
-    color: #49111C;           /* Granate */
-    
-    /* 3. Ajustes de legibilidad para diseño */
+    font-weight: 700;
+    background-color: #F2F4F3;
+    color: #49111C;
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
-    letter-spacing: -0.02em; /* Un toque de tracking negativo queda muy pro en Bold */
+    letter-spacing: -0.02em;
 }
 
 /*------------- PORTADA ---------------*/
@@ -74,7 +69,6 @@ body {
     background-color: #49111C; 
 }
 
-/* --- SECCIÓN PORTADA (HERO) --- */
 .hero {
     height: 100vh;
     display: flex;
@@ -100,6 +94,7 @@ body {
     color: #49111C;
     display: inline-block;
     animation: blink 0.7s infinite;
+    position: relative;
 }
 
 .hero-text p {
@@ -109,6 +104,22 @@ body {
     margin: 0 auto;
     justify-content: center;
     text-align: center;
+}
+
+.hero-text h1::after {
+    content: ""; 
+    position: absolute;
+    width: 0.12em;
+    height: 0.12em;
+    background-color: #49111C;
+    border-radius: 50%;
+    right: -0.2em;
+    top: 20%;
+    opacity: 0;
+}
+
+.hero-text h1.show-dot::after {
+    opacity: 1;
 }
 
 /* --- DOCK SOCIAL INFERIOR --- */
@@ -145,4 +156,63 @@ body {
 }
 
 /*---------------- FIN PORTADA ----------------------*/
+
+/*---------------- CONTENEDOR SOBRE MI ---------------*/
+
+.container-about {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh; /* Permite que la sección se adapte a la imagen */
+    padding: 30px 0; /* Más espacio arriba y abajo para que la foto respire */
+    background-color: #49111C;
+}
+
+.text-side {
+    flex: 1; /* El texto ocupa menos que la foto */
+    padding: 0 5% 0 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tittle h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 4rem;
+    color:#F5F5DC;
+    margin: 0;
+    /*text-shadow: 0 1px 10px #F5F5DC;*/
+}
+
+.content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #F2F4F3;
+    margin-bottom: 20px;
+}
+
+.image {
+    flex: 1.4; /* Le damos un 40% más de espacio a la derecha */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 100%; /* Que use casi todo el ancho de su columna */
+    max-width: 850px; /* Tamaño máximo bastante amplio */
+    height: auto; /* FUNDAMENTAL para que se vea entera y sin cortes */
+    object-fit: contain; 
+    display: block;
+}
+
+/*--------------- Fin Sobre mi ------------*/
+
+/*--------------- PORTFOLIO ---------------*/
+
+.portfolio{
+    padding-top: 300px;
+}
 
