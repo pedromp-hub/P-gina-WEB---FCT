@@ -1,8 +1,14 @@
-*{
+@font-face {
+    font-family: 'FantasmAndSecret';
+    src: url('Fantasm and Secrets.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F2F4F3;
 }
 
 body {
@@ -88,11 +94,12 @@ body {
 }
 
 .hero-text h1 {
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    line-height: 1;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-family: 'FantasmAndSecret', sans-serif;
+    font-size: clamp(3rem, 10vw, 7rem);
+    min-height: 1.2em;
     color: #49111C;
+    display: inline-block;
+    animation: blink 0.7s infinite;
 }
 
 .hero-text p {
