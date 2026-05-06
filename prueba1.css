@@ -160,13 +160,53 @@ body {
 /*---------------- CONTENEDOR SOBRE MI ---------------*/
 
 .container-about {
+    position: relative; /* OBLIGATORIO para que los logos se queden dentro */
     display: flex;
     align-items: center; 
     justify-content: center;
     width: 100%;
-    min-height: 100vh; /* Permite que la sección se adapte a la imagen */
-    padding: 30px 0; /* Más espacio arriba y abajo para que la foto respire */
+    min-height: 100vh;
+    padding: 30px 0;
     background-color: #49111C;
+    overflow: hidden; /* Evita que los logos creen scroll si los mueves mucho */
+}
+
+.logo-float {
+    position: absolute; /* Permite moverlos por coordenadas (top, left, etc.) */
+    width: 60px; /* Tamaño base */
+    height: auto;
+    z-index: 10; /* Los pone por delante de todo */
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.4)); /* Sombra para efecto 3D */
+    transition: transform 0.5s ease;
+}
+
+.logo-float:hover {
+    /* Al pasar el ratón, gira 360 grados y se agranda un pelín */
+    transform: rotate(360deg) scale(1.2); 
+    cursor: pointer; /* Cambia el cursor a una manita */
+}
+
+/* 3. POSICIONES INDIVIDUALES (Según tu dibujo) */
+
+.fb {
+    top: 5%;
+    left: 4%;
+    width: 85px;
+    transform: rotate(-15deg); /* Inclinado a la izquierda */
+}
+
+.tk {
+    top: 12%;
+    left: 45%; /* Cerca de la foto en el centro */
+    width: 110px; /* Un poco más grande */
+    transform: rotate(5deg);
+}
+
+.yt {
+    bottom: 10%;
+    left: 8%;
+    width: 70px;
+    transform: rotate(-1deg); /* Inclinado a la derecha */
 }
 
 .text-side {
@@ -193,6 +233,11 @@ body {
     margin-bottom: 20px;
 }
 
+.destacado{
+    font-style: italic;
+    font-weight: lighter;
+}
+
 .image {
     flex: 1.4; /* Le damos un 40% más de espacio a la derecha */
     display: flex;
@@ -202,7 +247,7 @@ body {
 
 .image img {
     width: 100%; /* Que use casi todo el ancho de su columna */
-    max-width: 850px; /* Tamaño máximo bastante amplio */
+    max-width: 1000px; /* Tamaño máximo bastante amplio */
     height: auto; /* FUNDAMENTAL para que se vea entera y sin cortes */
     object-fit: contain; 
     display: block;
