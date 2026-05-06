@@ -241,10 +241,9 @@ body {
 }
 
 .rayas-tittle {
-    width: clamp(50px, 10%, 150px); /* Evita que crezca infinito o desaparezca */
+    width: 150px; /* Dale un tamaño fijo en PX, como a la firma */
+    left: 25%;    /* O el porcentaje que veas que encaja con tu texto */
     bottom: 15%;
-    left: 30%;
-    transform: translateX(-50%); /* Ayuda a estabilizar el punto de anclaje */
     opacity: 1;
 }
 
