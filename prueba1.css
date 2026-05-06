@@ -128,6 +128,8 @@ body {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 9999; /* Un número muy alto para que nada le pase por encima */
+    pointer-events: auto; /* Asegura que los clics funcionen siempre */
 }
 
 .social-container {
@@ -167,46 +169,12 @@ body {
     width: 100%;
     min-height: 100vh;
     padding: 30px 0;
-    background-color: #49111C;
-    overflow: hidden; /* Evita que los logos creen scroll si los mueves mucho */
-}
-
-.logo-float {
-    position: absolute; /* Permite moverlos por coordenadas (top, left, etc.) */
-    width: 60px; /* Tamaño base */
-    height: auto;
-    z-index: 10; /* Los pone por delante de todo */
-    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.4)); /* Sombra para efecto 3D */
-    transition: transform 0.5s ease;
-}
-
-.logo-float:hover {
-    /* Al pasar el ratón, gira 360 grados y se agranda un pelín */
-    transform: rotate(360deg) scale(1.2); 
-    cursor: pointer; /* Cambia el cursor a una manita */
-}
-
-/* 3. POSICIONES INDIVIDUALES (Según tu dibujo) */
-
-.fb {
-    top: 5%;
-    left: 4%;
-    width: 85px;
-    transform: rotate(-15deg); /* Inclinado a la izquierda */
-}
-
-.tk {
-    top: 12%;
-    left: 45%; /* Cerca de la foto en el centro */
-    width: 110px; /* Un poco más grande */
-    transform: rotate(5deg);
-}
-
-.yt {
-    bottom: 10%;
-    left: 8%;
-    width: 70px;
-    transform: rotate(-1deg); /* Inclinado a la derecha */
+    /*background-color: #49111C;*/
+    background-image: url(fondo.png);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .text-side {
@@ -220,7 +188,7 @@ body {
 .tittle h1 {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color:#F5F5DC;
     margin: 0;
     /*text-shadow: 0 1px 10px #F5F5DC;*/
@@ -239,7 +207,7 @@ body {
 }
 
 .image {
-    flex: 1.4; /* Le damos un 40% más de espacio a la derecha */
+    flex: 1.4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -251,6 +219,38 @@ body {
     height: auto; /* FUNDAMENTAL para que se vea entera y sin cortes */
     object-fit: contain; 
     display: block;
+}
+
+.adorno-superior, .rayas-tittle, .firma-abajo {
+    position: absolute;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.adorno-superior {
+    width: 50px;
+    top: 21.5%;
+    left: 6.3%;
+    transform: rotate(0deg);
+    animation: animacion-adorno-superior 3s ease-in-out infinite;
+}
+
+@keyframes animacion-adorno-superior {
+    0%, 100% { transform: rotate(-15deg) scale(1); opacity: 0.8; }
+    50% { transform: rotate(-15deg) scale(1.2); opacity: 1; }
+}
+
+.rayas-tittle {
+    width: 200px;
+    bottom: 11%;
+    left: 25%;
+    opacity: 2;
+}
+
+.firma-abajo {
+    width: 140px;
+    bottom: 20%;
+    left: 6.5%;
 }
 
 /*--------------- Fin Sobre mi ------------*/
