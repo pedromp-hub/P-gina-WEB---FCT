@@ -192,6 +192,19 @@ body {
     color:#F5F5DC;
     margin: 0;
     /*text-shadow: 0 1px 10px #F5F5DC;*/
+    animation: glowFluido 3s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+@keyframes glowFluido {
+    from {
+        text-shadow: 0 0 10px rgba(255,255,255,0.2), 0 0 20px rgba(249,141,1,0.2);
+        transform: scale(1);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255,255,255,0.4), 0 0 30px rgba(249,141,1,0.5);
+        transform: scale(1.02);
+    }
 }
 
 .content p {
@@ -199,6 +212,27 @@ body {
     line-height: 1.8;
     color: #F2F4F3;
     margin-bottom: 20px;
+}
+
+#firma {
+    font-family: 'FantasmAndSecret', sans-serif;
+    font-size: 2rem;
+    color: #F2F4F3;
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+}
+
+#firma::after {
+    content: "";
+    position: absolute;
+    top: 0.3rem;
+    right: -10px;
+    
+    width: 5px;
+    height: 5px;
+    background-color: #F2F4F3;
+    border-radius: 50%;
 }
 
 .destacado{
@@ -219,38 +253,6 @@ body {
     height: auto; /* FUNDAMENTAL para que se vea entera y sin cortes */
     object-fit: contain; 
     display: block;
-}
-
-.adorno-superior, .rayas-tittle, .firma-abajo {
-    position: absolute;
-    z-index: 5;
-    pointer-events: none;
-}
-
-.adorno-superior {
-    width: 50px;
-    top: 21.5%;
-    left: 6.3%;
-    transform: rotate(0deg);
-    animation: animacion-adorno-superior 3s ease-in-out infinite;
-}
-
-@keyframes animacion-adorno-superior {
-    0%, 100% { transform: rotate(-15deg) scale(1); opacity: 0.8; }
-    50% { transform: rotate(-15deg) scale(1.2); opacity: 1; }
-}
-
-.rayas-tittle {
-    width: 150px; /* Dale un tamaño fijo en PX, como a la firma */
-    left: 25%;    /* O el porcentaje que veas que encaja con tu texto */
-    bottom: 15%;
-    opacity: 1;
-}
-
-.firma-abajo {
-    width: 140px;
-    bottom: 20%;
-    left: 6.5%;
 }
 
 /*--------------- Fin Sobre mi ------------*/
