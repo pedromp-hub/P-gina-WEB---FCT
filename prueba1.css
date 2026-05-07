@@ -192,19 +192,24 @@ body {
     color:#F5F5DC;
     margin: 0;
     /*text-shadow: 0 1px 10px #F5F5DC;*/
-    animation: glowFluido 3s ease-in-out infinite alternate;
-    text-shadow: 0 0 10px rgba(255,255,255,0.1);
+    overflow: hidden; 
+    white-space: nowrap;
+    width: 0;
 }
 
-@keyframes glowFluido {
-    from {
-        text-shadow: 0 0 10px rgba(255,255,255,0.2), 0 0 20px rgba(249,141,1,0.2);
-        transform: scale(1);
-    }
-    to {
-        text-shadow: 0 0 20px rgba(255,255,255,0.4), 0 0 30px rgba(249,141,1,0.5);
-        transform: scale(1.02);
-    }
+.animar-escritura {
+    animation: 
+        escribiendo 2s steps(30) forwards,
+        parpadeoCursor 0.8s step-end infinite;
+}
+
+@keyframes escribiendo {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes parpadeoCursor {
+    50% { border-color: transparent; }
 }
 
 .content p {
@@ -259,7 +264,76 @@ body {
 
 /*--------------- PORTFOLIO ---------------*/
 
-.portfolio{
+.portfolio h1{
+    padding-top: 8%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+.portfolio p {
+    justify-content: center;
+    display: flex;
+    color: black;
+}
+
+#flecha{
+    padding-top: 2%;
+    font-size: 25px;
+    color: #49111C;
+}
+
+.cueva {
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.cueva .logo {
+    display: block;    /* Permite usar márgenes automáticos */
+    margin: 0 auto;    /* Centra horizontalmente */
+    width: 250px;      /* Ajusta el tamaño según necesites */
+    height: auto;
+    padding-bottom: 5%;
+}
+
+.in-cueva {
+    display: grid;
+    /* Creamos 3 columnas que se reparten el 100% del ancho */
+    grid-template-columns: repeat(3, 1fr);
+    /* Gap 0 para que las imágenes estén totalmente pegadas */
+    gap: 0; 
+    width: 100vw;
+}
+
+/* 3. Estilo de las imágenes */
+.in-cueva img {
+    width: 100%;
+    /* Altura proporcional: 1/3 del ancho de la pantalla para que sean cuadradas */
+    height: 33.33vw; 
+    object-fit: cover; /* Evita que las fotos de comida se deformen */
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease; /* Duración de 0.5 segundos */
+    transform: scale(1); /* Estado inicial (tamaño normal) */
+}
+
+.in-cueva img:hover {
+    transform: scale(1.1); /* Amplía la imagen un 10% */
+    filter: brightness(1.1); /* Opcional: le da un toque de brillo al ampliar */
+    cursor: pointer;
+}
+
+/* 4. La imagen con clase "ancho" (la panorámica de arriba) */
+.in-cueva img.ancho {
+    grid-column: span 3; /* Ocupa las 3 columnas */
+    height: 40vw;       /* Un poco más alta para destacar el plato principal */
+}
+
+#pruebas{
     padding-top: 300px;
 }
 

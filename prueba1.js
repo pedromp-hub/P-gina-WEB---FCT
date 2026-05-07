@@ -17,3 +17,21 @@ function typeWriter() {
 }
 
 window.onload = typeWriter;
+
+const observador = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const titulo = entry.target.querySelector('h1');
+        
+        if (entry.isIntersecting) {
+            // Si aparece en pantalla, añade la clase de animación
+            titulo.classList.add('animar-escritura');
+        } else {
+            // OPCIONAL: Si quieres que se reinicie cada vez que sales y entras
+            titulo.classList.remove('animar-escritura');
+            titulo.style.width = "0"; 
+        }
+    });
+}, { threshold: 0.5 }); // Se activa cuando se ve el 50% de la sección
+
+// Seleccionamos el contenedor del título para observar
+observador.observe(document.querySelector('.tittle'));
