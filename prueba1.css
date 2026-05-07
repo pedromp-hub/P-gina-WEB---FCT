@@ -1,160 +1,159 @@
-@font-face {
-    font-family: 'FantasmAndSecret';
-    src: url('Fantasm and Secrets.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
+@font-face { /*Importar fuente externa*/
+    font-family: 'FantasmAndSecret'; /*Nombre interno de la fuente*/
+    src: url('Fantasm and Secrets.ttf') format('truetype'); /*Ruta donde esta guardado el archivo y especifica el formato*/
+    font-weight: normal; /*Usara grosol normal*/
+    font-style: normal; /*Fuente versión estandar*/
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /*Elimina espacio exterior (Margen)*/
+    padding: 0; /*Elimina espacio interior*/
+    box-sizing: border-box; /*Ancho y largo de un elemento incluya bordes y relleno*/
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    background-color: #F2F4F3;
-    color: #49111C;
-    line-height: 1.2;
-    -webkit-font-smoothing: antialiased;
-    letter-spacing: -0.02em;
+    font-family: 'Montserrat', sans-serif; /*Aplicamos la fuente*/
+    font-weight: 700; /*Grosor de fuente negrita*/
+    background-color: #F2F4F3; /*Color de fondo*/
+    color: #49111C; /*Color del texto*/
+    line-height: 1.2; /*Altura entre lineas*/
+    -webkit-font-smoothing: antialiased; /*Para que las fuentes se vean mas nitidas y suaves*/
+    letter-spacing: -0.02em; /*Espacio entre letras*/
 }
 
 /*------------- PORTADA ---------------*/
 
 /* --- MENÚ FLOTANTE  --- */
 .floating-nav {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
+    position: absolute; /*Fija el menu en una posicion especifica*/
+    top: 30px; /*Separacion del borde superior*/
+    left: 50%; /*Desplaza el borde izquierdo hasta la mitad de la pantalla*/
+    transform: translateX(-50%); /*Para que quede centrado*/
+    z-index: 1000; /*Para que este por encima de cualquier otro elemento*/
 }
 
 .nav-container {
-    display: flex;
-    background-color: #F2F4F3;
-    backdrop-filter: blur(12px);
-    padding: 6px 10px;
-    border-radius: 50px;
-    border: 1px solid #4A0E0E;
-    box-shadow: 0 1px 10px #49111C;
-    list-style: none;
+    display: flex; /*Alinea los elementos horizontalmente*/
+    background-color: #F2F4F3; /*Color de fonfo*/
+    backdrop-filter: blur(12px); /*Efecto que desenfoca lo que hay detras del menu*/
+    padding: 6px 10px; /*Espacio interno arriba, abajo y por los lados*/
+    border-radius: 50px; /*Redondea los bordes*/
+    border: 1px solid #4A0E0E; /*Añade un borde fino con ese color*/
+    box-shadow: 0 1px 10px #49111C; /*Proyecta una sombra suave de ese color*/
+    list-style: none; /*Elimina puntos o viñetas*/
 }
 
 .nav-item {
-    padding: 10px 18px;
-    border-radius: 40px;
+    padding: 10px 18px; /*Espacio interno arriba, abajo y por los lados*/
+    border-radius: 40px; /*Redondea los bordes*/
 }
 
 .nav-item a {
-    text-decoration: none;
-    color: #4A0E0E;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s;
+    text-decoration: none; /*Quita la decoración*/
+    color: #4A0E0E; /*Le da ese color*/
+    font-size: 14px; /*Tamaño*/
+    font-weight: 500; /*Tamaño*/
+    transition: 0.3s; /*Añade animación*/
 }
 
 .nav-item:hover{
-    color: #4A0E0E;
-    transform: translateY(-2px);
+    color: #4A0E0E; /*Le da ese color*/
+    transform: translateY(-2px); /*Desplaza el elemento 2px hacia arriba*/
 }
 
 .nav-item.active { 
-    background-color:  #49111C; 
+    background-color:  #49111C; /*Aplica ese color de fondo*/
 }
 .nav-item.active a { 
-    color: #F2F4F3;
-    background-color: #49111C; 
+    color: #F2F4F3; /*Color que aplicamos*/
+    background-color: #49111C; /*Color de fondo*/
 }
 
 .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
+    height: 100vh; /*Altura que ocupa*/
+    display: flex; /*Alinea los elementos horizontalmente*/
+    align-items: center; /*Alinea en el centro los items*/
+    justify-content: center; /*Alinea el contenido en el centro*/
+    text-align: center; /*Alinea en el centro el texto*/
+    padding: 0 20px; /*Espacio interno arriba, abajo y por los lados*/
 }
 
 .hero-text .category {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 12px;
-    color: #49111C;
-    margin-bottom: 20px;
-    display: block;
+    text-transform: uppercase; /*Convierte el texto en mayusculas*/
+    letter-spacing: 3px; /*Espacio entre letras*/
+    font-size: 12px; /*Tamaño*/
+    color: #49111C; /*Color que aplicamos*/
+    margin-bottom: 20px; /*Margen externo por debajo*/
+    display: block; /*Ocupe su propia linea*/
 }
 
 .hero-text h1 {
-    font-family: 'FantasmAndSecret', sans-serif;
-    font-size: clamp(3rem, 10vw, 7rem);
-    min-height: 1.2em;
-    color: #49111C;
-    display: inline-block;
-    animation: blink 0.7s infinite;
-    position: relative;
+    font-family: 'FantasmAndSecret', sans-serif; /*Aplicamos la fuente*/
+    font-size: clamp(3rem, 10vw, 7rem); /*Aplicamos tamaño dinamico (min, max y escala ancho)*/
+    min-height: 1.2em; /*Reservamos espacio vertical*/
+    color: #49111C; /*Color que aplicamos*/
+    display: inline-block; /*Elemento se comporte como bloque*/
+    position: relative; /*Establece punto de referencia*/
 }
 
 .hero-text p {
-    font-size: 1.1rem;
-    color: #49111C;
-    max-width: 450px;
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center;
+    font-size: 1.1rem; /*Tamaño*/
+    color: #49111C; /*Color que aplicamos*/
+    max-width: 450px; /*Limita el ancho*/
+    margin: 0 auto; /*Centra el bloque horizontalmente*/
+    justify-content: center; /*Alinea el contenido en el centro*/
+    text-align: center; /*Alinea el texto en el centro*/
 }
 
 .hero-text h1::after {
-    content: ""; 
-    position: absolute;
-    width: 0.12em;
-    height: 0.12em;
-    background-color: #49111C;
-    border-radius: 50%;
-    right: -0.2em;
-    top: 20%;
-    opacity: 0;
+    content: ""; /*Muestra el elemento aunque este vacio*/
+    position: absolute; /*Posiciona libremente respecto a h1*/
+    width: 0.12em; /*Ancho del punto*/
+    height: 0.12em; /*Altura del punto*/
+    background-color: #49111C; /*Color de fondo*/
+    border-radius: 50%; /*Redondea los bordes*/
+    right: -0.2em; /*Separa hacia la derecha*/
+    top: 20%; /*Separacion por arriba*/
+    opacity: 0; /*Lo hace invisible por defecto*/
 }
 
 .hero-text h1.show-dot::after {
-    opacity: 1;
+    opacity: 1; /*Hace que el punto se vuelva visible*/
 }
 
 /* --- DOCK SOCIAL INFERIOR --- */
 .social-dock {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: fixed; /*Lo deja anclado en la pantalla*/
+    bottom: 30px; /*Separacion por debajo*/
+    left: 50%; /*Separación por la izquierda*/
+    transform: translateX(-50%); /*Centrarlo perfectamente*/
     z-index: 9999; /* Un número muy alto para que nada le pase por encima */
     pointer-events: auto; /* Asegura que los clics funcionen siempre */
 }
 
 .social-container {
-    display: flex;
-    gap: 20px;
-    background-color: #F2F4F3;
-    backdrop-filter: blur(10px);
-    padding: 12px 25px;
-    border-radius: 50px;
-    border: 1px solid #49111C;
-    box-shadow: 0 1px 10px #49111C;
+    display: flex; /*Alinea los elementos horizontalmente*/
+    gap: 20px; /*Separa los iconos entre si*/
+    background-color: #F2F4F3; /*Color de fondo*/
+    backdrop-filter: blur(10px); /*Desenfoca ligeramente lo que hay detras*/
+    padding: 12px 25px; /*Espacio interno arriba, abajo y por los lados*/
+    border-radius: 50px; /*Redondea los bordes*/
+    border: 1px solid #49111C; /*Añade un borde fino con ese color*/
+    box-shadow: 0 1px 10px #49111C; /*Proyecta una sombra suave de ese color*/
 }
 
 .social-icon {
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-    color: #49111C;
-    text-transform: uppercase;
-    transition: 0.3s;
+    text-decoration: none; /*Quita el subrayado por defecto*/
+    font-size: 12px; /*Tamaño*/
+    font-weight: 600; /*Grosor de fuente negrita*/
+    color: #49111C; /*Color que aplicamos*/
+    text-transform: uppercase; /*Convierte el texto en mayusculas*/
+    transition: 0.3s; /*Transicion de suavizado del raton*/
 }
 
 .social-icon:hover {
-    color: #49111C;
-    transform: translateY(-2px);
+    color: #49111C; /*Color que aplicamos*/
+    transform: translateY(-2px); /*Salta 2px hacia arriba*/
 }
 
 /*---------------- FIN PORTADA ----------------------*/
@@ -162,45 +161,43 @@ body {
 /*---------------- CONTENEDOR SOBRE MI ---------------*/
 
 .container-about {
-    position: relative; /* OBLIGATORIO para que los logos se queden dentro */
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 30px 0;
-    /*background-color: #49111C;*/
-    background-image: url(fondo.png);
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    position: relative; /*Establece punto de referencia*/
+    display: flex; /*Alinea los elementos horizontalmente*/
+    align-items: center; /*Alinea en el centro los items*/
+    justify-content: center; /*Alinea el contenido en el centro*/
+    width: 100%; /*Ocupa todo el ancho*/
+    min-height: 100vh; /*Altura minima de la sección*/
+    padding: 30px 0; /*Espacio interno arriba, abajo y por los lados*/
+    background-image: url(fondo.png); /*Carga la imagen como fondo*/
+    background-size: cover; /*Para que cubra todo el espacio sin deformarse*/
+    background-position: center; /*Centra la imagen de fondo*/
+    background-repeat: no-repeat; /*No se repita el fondo*/
+    overflow: hidden; /*Corta cualquier contenido que se salga*/
 }
 
 .text-side {
     flex: 1; /* El texto ocupa menos que la foto */
-    padding: 0 5% 0 8%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    padding: 0 5% 0 8%; /*Espacio interno arriba, abajo, derecha y izquierda*/
+    display: flex; /*Alinea los elementos horizontalmente*/
+    flex-direction: column; /*Apila los elementos*/
+    gap: 15px; /*Espacio entre cada elemento*/
 }
 
 .tittle h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-    font-size: 3.5rem;
-    color:#F5F5DC;
-    margin: 0;
-    /*text-shadow: 0 1px 10px #F5F5DC;*/
-    overflow: hidden; 
-    white-space: nowrap;
-    width: 0;
+    font-family: 'Montserrat', sans-serif; /*Aplicamos la fuente*/
+    font-style: italic; /*Fuente en cursiva*/
+    font-size: 3.5rem; /*Tamaño*/
+    color:#F5F5DC; /*Color que aplicamos*/
+    margin: 0; /*Elimina espacio exterior (Margen)*/
+    overflow: hidden; /*Corta cualquier contenido que se salga*/
+    white-space: nowrap; /*Evita que salte a una segunda linea*/
+    width: 0; /*Para que empiece con ancho cero*/
 }
 
 .animar-escritura {
-    animation: 
-        escribiendo 2s steps(30) forwards,
-        parpadeoCursor 0.8s step-end infinite;
+    animation: /*LLama a dos animaciones*/
+    escribiendo 2s steps(30) forwards, /*Ejecuta la animación de escritura*/
+    parpadeoCursor 0.8s step-end infinite; /*Hace el borde invisible*/
 }
 
 @keyframes escribiendo {
@@ -213,51 +210,51 @@ body {
 }
 
 .content p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: #F2F4F3;
-    margin-bottom: 20px;
+    font-size: 1.15rem; /*Tamaño*/
+    line-height: 1.8; /*Separacion de lineas*/
+    color: #F2F4F3; /*Color que aplicamos*/
+    margin-bottom: 20px; /*Distancia del margen por abajo*/
 }
 
 #firma {
-    font-family: 'FantasmAndSecret', sans-serif;
-    font-size: 2rem;
-    color: #F2F4F3;
-    position: relative;
-    display: inline-block;
-    line-height: 1;
+    font-family: 'FantasmAndSecret', sans-serif; /*Aplicamos la fuente*/
+    font-size: 2rem; /*Tamaño*/
+    color: #F2F4F3; /*Color que aplicamos*/
+    position: relative; /*Establece punto de referencia*/
+    display: inline-block; /*Elemento se comporte como bloque*/
+    line-height: 1; /*Separacion de lineas*/
 }
 
 #firma::after {
-    content: "";
-    position: absolute;
-    top: 0.3rem;
-    right: -10px;
+    content: ""; /*Muestra el elemento aunque este vacio*/
+    position: absolute; /*Posiciona libremente respecto a h1*/
+    top: 0.3rem; /*Distancia por arriba*/
+    right: -10px; /*Distancia por derecha*/
     
-    width: 5px;
-    height: 5px;
-    background-color: #F2F4F3;
-    border-radius: 50%;
+    width: 5px; /*Ancho*/
+    height: 5px; /*Altura*/
+    background-color: #F2F4F3; /*Color de fondo*/
+    border-radius: 50%; /*Redondea los bordes*/
 }
 
 .destacado{
-    font-style: italic;
-    font-weight: lighter;
+    font-style: italic; /*Fuente en cursiva*/
+    font-weight: lighter; /*Fuente sea mas fina*/
 }
 
 .image {
-    flex: 1.4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1.4; /*Ocupacion del contenedor*/
+    display: flex; /*Alinea los elementos horizontalmente*/
+    justify-content: center; /*Contenido justificado en el centro*/
+    align-items: center; /*Items alineados en el centro*/
 }
 
 .image img {
     width: 100%; /* Que use casi todo el ancho de su columna */
     max-width: 1000px; /* Tamaño máximo bastante amplio */
     height: auto; /* FUNDAMENTAL para que se vea entera y sin cortes */
-    object-fit: contain; 
-    display: block;
+    object-fit: contain; /*Asegurar que la imagen se vea entera*/
+    display: block; /*Ocupe su propia linea*/
 }
 
 /*--------------- Fin Sobre mi ------------*/
