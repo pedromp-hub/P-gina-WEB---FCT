@@ -186,7 +186,7 @@ body {
 .tittle h1 {
     font-family: 'Montserrat', sans-serif; /*Aplicamos la fuente*/
     font-style: italic; /*Fuente en cursiva*/
-    font-size: 3.5rem; /*Tamaño*/
+    font-size: 3rem; /*Tamaño*/
     color:#F5F5DC; /*Color que aplicamos*/
     margin: 0; /*Elimina espacio exterior (Margen)*/
     overflow: hidden; /*Corta cualquier contenido que se salga*/
