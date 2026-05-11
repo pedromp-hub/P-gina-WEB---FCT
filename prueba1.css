@@ -324,7 +324,7 @@ body {
 .in-cueva img {
     width: 100%;
     /* Altura proporcional: 1/3 del ancho de la pantalla para que sean cuadradas */
-    height: 33.33vw; 
+    height: 33vw; 
     object-fit: cover; /* Evita que las fotos de comida se deformen */
     display: block;
 }
@@ -333,6 +333,66 @@ body {
 .in-cueva img.ancho {
     grid-column: span 3; /* Ocupa las 3 columnas */
     height: 40vw;       /* Un poco más alta para destacar el plato principal */
+}
+
+.zurita {
+    width: 100%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.zurita .logo {
+    display: block;    /* Permite usar márgenes automáticos */
+    margin: 0 auto;    /* Centra horizontalmente */
+    width: 300px;      /* Ajusta el tamaño según necesites */
+    height: auto;
+    padding-bottom: 1%;
+}
+
+.in-zurita {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0; 
+    width: 100vw;
+}
+
+.in-zurita img {
+    width: 100%;
+    height: 33vw; 
+    object-fit: cover;
+    display: block;
+}
+
+.carlos-ferreiro {
+    width: 100%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.carlos-ferreiro .logo {
+    display: block;    /* Permite usar márgenes automáticos */
+    margin: 0 auto;    /* Centra horizontalmente */
+    width: 300px;      /* Ajusta el tamaño según necesites */
+    height: auto;
+    padding-bottom: 1%;
+}
+
+.in-carlos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0; 
+    width: 100vw;
+}
+
+.in-carlos img {
+    width: 100%;
+    height: 33vw; 
+    object-fit: cover;
+    display: block;
+}
+
+.in-carlos2 img{
+    height: 16.5vw;
 }
 
 #pruebas{
