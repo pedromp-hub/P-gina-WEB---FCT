@@ -25,10 +25,51 @@ body {
     letter-spacing: -0.02em; /*Espacio entre letras*/
 }
 
+.tittle {
+    background-color: #49111C;
+    color: #F5F5DC;
+    justify-content: center;
+    text-align: center;
+}
+
+.tittle h1 {
+    padding-bottom: 3%;
+    padding-top: 3%;
+    font-family: 'Montserrat', sans-serif; /*Aplicamos la fuente*/
+    font-style: italic; /*Fuente en cursiva*/
+    font-size: 3rem; /*Tamaño*/
+}
+
+.information {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    padding-top: 2%;
+}
+
+#flecha{
+    padding-top: 3%;
+    font-size: 25px;
+    color: #49111C;
+    animation: botar 2s infinite;
+}
+
+@keyframes botar {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posición original */
+    }
+    40% {
+        transform: translateY(-20px); /* Salto hacia arriba */
+    }
+    60% {
+        transform: translateY(-10px); /* Segundo salto más pequeño */
+    }
+}
+
 .cueva {
     width: 100%;
     padding-top: 3%;
-    padding-bottom: 5%;
+    padding-bottom: 0%;
     text-align: center;
 }
 
@@ -80,11 +121,26 @@ body {
 }
 
 .in-bambola img {
-    padding-top: 2%;
     width: 100%; 
     object-fit: cover;
     display: block;
     height: auto;
+}
+
+.in-boka img {
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: 70vw;
+    padding-top: 5%;
+}
+
+.in-pb img {
+    padding-top: 8%;
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: 70vw;
 }
 
 .carlos-ferreiro {
@@ -118,22 +174,6 @@ body {
 
 .in-carlos2 img{
     height: 25vw;
-}
-
-.in-boka img {
-    padding-top: 8%;
-    width: 100%; 
-    object-fit: cover;
-    display: block;
-    height: auto;
-}
-
-.in-pb img {
-    padding-top: 8%;
-    width: 100%; 
-    object-fit: cover;
-    display: block;
-    height: auto;
 }
 
 .in-otros img {
