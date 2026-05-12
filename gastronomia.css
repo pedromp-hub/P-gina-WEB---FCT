@@ -30,26 +30,37 @@ body {
     color: #F5F5DC;
     justify-content: center;
     text-align: center;
+    /* Añadimos un poco más de espacio abajo para que la tarjeta tenga donde apoyarse */
+    padding-bottom: 80px; 
 }
 
 .tittle h1 {
     padding-bottom: 3%;
     padding-top: 3%;
-    font-family: 'Montserrat', sans-serif; /*Aplicamos la fuente*/
-    font-style: italic; /*Fuente en cursiva*/
-    font-size: 3rem; /*Tamaño*/
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 3rem;
 }
 
 .information {
+    /* Mantenemos tus estilos */
     justify-content: center;
     text-align: center;
     color: black;
     padding-top: 2%;
+    
+    /* Añadimos el bloque */
+    background-color: white;
+    max-width: 900px;        /* Ancho del bloque */
+    margin: -60px auto 0;    /* Esto hace que el bloque suba sobre el granate */
+    padding: 40px;           /* Espacio interno para que no pegue a los bordes */
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1); /* Sombra suave para el efecto de bloque */
 }
 
 #flecha{
     padding-top: 3%;
     font-size: 25px;
+    font-weight: bold;
     color: #49111C;
     animation: botar 2s infinite;
 }
