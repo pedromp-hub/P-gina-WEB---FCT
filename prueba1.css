@@ -5,6 +5,10 @@
     font-style: normal; /*Fuente versión estandar*/
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
     margin: 0; /*Elimina espacio exterior (Margen)*/
     padding: 0; /*Elimina espacio interior*/
@@ -296,133 +300,65 @@ body {
     }
 }
 
-.gastronomia{
-    padding-bottom: 3%;
-    padding-top: 3%;
-    color:#F5F5DC;
-    background-color: #49111C;
-    justify-content: center;
-    text-align: center;
+.contenedor-galeria {
+  display: flex;
+  gap: 20px; /* Espacio entre las columnas */
+  justify-content: center;
+  padding: 20px;
 }
 
-.cueva {
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 5%;
-    text-align: center;
+.contenedor-galeria2 {
+  display: flex;
+  gap: 20px; /* Espacio entre las columnas */
+  justify-content: center;
+  padding: 20px;
 }
 
-.cueva .logo {
-    display: block;    /* Permite usar márgenes automáticos */
-    margin: 0 auto;    /* Centra horizontalmente */
-    width: 200px;      /* Ajusta el tamaño según necesites */
-    height: auto;
-    padding-bottom: 5%;
+/* Estilo de cada columna (enlace) */
+.columna {
+  flex: 1; /* Hace que las 3 columnas ocupen el mismo ancho */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  color: #49111C; /* Color del texto */
+  text-align: center; /* Centra la imagen y el texto */
+  display: flex;
+  flex-direction: column; /* Alinea imagen arriba y texto abajo */
+  align-items: center;
 }
 
-.in-cueva {
-    display: grid;
-    /* Creamos 3 columnas que se reparten el 100% del ancho */
-    grid-template-columns: repeat(3, 1fr);
-    /* Gap 0 para que las imágenes estén totalmente pegadas */
-    gap: 0; 
-    width: 100vw;
+/* Estilo de las imágenes */
+.columna img {
+  width: 100%; /* La imagen ocupa todo el ancho de la columna */
+  border-radius: 8px; /* Opcional: bordes redondeados */
+  margin-bottom: 10px; /* Espacio entre imagen y texto */
+  object-fit: cover;
+  aspect-ratio: 19 / 11;
 }
 
-/* 3. Estilo de las imágenes */
-.in-cueva img {
-    width: 100%;
-    /* Altura proporcional: 1/3 del ancho de la pantalla para que sean cuadradas */
-    height: 50vw; 
-    object-fit: cover; /* Evita que las fotos de comida se deformen */
-    display: block;
+.columna span {
+  display: inline-block;
+  margin-top: 15px; /* Espacio entre la foto y el botón */
+  padding: 10px 25px; /* Espacio interno para que parezca botón */
+  
+  /* Esto lo hace redondo y con fondo */
+  background-color: #49111c; /* El color granate que usas */
+  color: white; /* Texto en blanco para que resalte */
+  border-radius: 50px; /* Bordes muy redondeados (estilo cápsula) */
+  
+  font-weight: bold;
+  text-transform: uppercase; /* Opcional: letras en mayúsculas */
+  font-size: 0.9rem;
+  
+  transition: all 0.3s ease; /* Para que el cambio de color sea suave */
 }
 
-/* 4. La imagen con clase "ancho" (la panorámica de arriba) */
-.in-cueva img.ancho {
-    grid-column: span 3; /* Ocupa las 3 columnas */
-    height: 40vw;       /* Un poco más alta para destacar el plato principal */
+/* Efecto cuando pasas el ratón sobre la columna completa */
+.columna:hover span, .columna:hover p {
+  background-color: #721c2b; /* Un tono más claro al pasar el mouse */
+  transform: translateY(-3px); /* Pequeño salto hacia arriba */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra para dar profundidad */
 }
 
-.in-zurita img {
-    width: 100%; 
-    object-fit: cover;
-    display: block;
-    height: auto;
-    padding-bottom: 0%;
-}
 
-.in-mostaza img {
-    width: 100%; 
-    object-fit: cover;
-    display: block;
-    height: auto;
-}
-
-.in-bambola img {
-    padding-top: 2%;
-    width: 100%; 
-    object-fit: cover;
-    display: block;
-    height: auto;
-}
-
-.carlos-ferreiro {
-    width: 100%;
-    padding-bottom: 0%;
-    text-align: center;
-}
-
-.carlos-ferreiro .logo {
-    display: block;    /* Permite usar márgenes automáticos */
-    margin: 0 auto;    /* Centra horizontalmente */
-    width: 500px;      /* Ajusta el tamaño según necesites */
-    height: auto;
-    padding-bottom: 0%;
-    padding-top: 0%;
-}
-
-.in-carlos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0; 
-    width: 100vw;
-}
-
-.in-carlos img {
-    width: 100%;
-    height: 50vw; 
-    object-fit: cover;
-    display: block;
-}
-
-.in-carlos2 img{
-    height: 25vw;
-}
-
-.in-boka img {
-    padding-top: 8%;
-    width: 100%; 
-    object-fit: cover;
-    display: block;
-    height: auto;
-}
-
-.in-pb img {
-    padding-top: 8%;
-    width: 100%; 
-    object-fit: cover;
-    display: block;
-    height: auto;
-}
-
-.in-otros img {
-    padding-top: 8%;
-    width: 100%; 
-    object-fit: cover;
-    display: block;
-    height: auto;
-}
 
 #pruebas{
     padding-top: 300px;

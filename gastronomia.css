@@ -1,0 +1,179 @@
+@font-face { /*Importar fuente externa*/
+    font-family: 'FantasmAndSecret'; /*Nombre interno de la fuente*/
+    src: url('Fantasm and Secrets.ttf') format('truetype'); /*Ruta donde esta guardado el archivo y especifica el formato*/
+    font-weight: normal; /*Usara grosol normal*/
+    font-style: normal; /*Fuente versión estandar*/
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    margin: 0; /*Elimina espacio exterior (Margen)*/
+    padding: 0; /*Elimina espacio interior*/
+    box-sizing: border-box; /*Ancho y largo de un elemento incluya bordes y relleno*/
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /*Aplicamos la fuente*/
+    font-weight: 700; /*Grosor de fuente negrita*/
+    background-color: #F2F4F3; /*Color de fondo*/
+    color: #49111C; /*Color del texto*/
+    line-height: 1.2; /*Altura entre lineas*/
+    -webkit-font-smoothing: antialiased; /*Para que las fuentes se vean mas nitidas y suaves*/
+    letter-spacing: -0.02em; /*Espacio entre letras*/
+}
+
+.cueva {
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.cueva .logo {
+    display: block;    /* Permite usar márgenes automáticos */
+    margin: 0 auto;    /* Centra horizontalmente */
+    width: 200px;      /* Ajusta el tamaño según necesites */
+    height: auto;
+    padding-bottom: 5%;
+}
+
+.in-cueva {
+    display: grid;
+    /* Creamos 3 columnas que se reparten el 100% del ancho */
+    grid-template-columns: repeat(3, 1fr);
+    /* Gap 0 para que las imágenes estén totalmente pegadas */
+    gap: 0; 
+    width: 100vw;
+}
+
+/* 3. Estilo de las imágenes */
+.in-cueva img {
+    width: 100%;
+    /* Altura proporcional: 1/3 del ancho de la pantalla para que sean cuadradas */
+    height: 50vw; 
+    object-fit: cover; /* Evita que las fotos de comida se deformen */
+    display: block;
+}
+
+/* 4. La imagen con clase "ancho" (la panorámica de arriba) */
+.in-cueva img.ancho {
+    grid-column: span 3; /* Ocupa las 3 columnas */
+    height: 40vw;       /* Un poco más alta para destacar el plato principal */
+}
+
+.in-zurita img {
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: auto;
+    padding-bottom: 0%;
+}
+
+.in-mostaza img {
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+
+.in-bambola img {
+    padding-top: 2%;
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+
+.carlos-ferreiro {
+    width: 100%;
+    padding-bottom: 0%;
+    text-align: center;
+}
+
+.carlos-ferreiro .logo {
+    display: block;    /* Permite usar márgenes automáticos */
+    margin: 0 auto;    /* Centra horizontalmente */
+    width: 500px;      /* Ajusta el tamaño según necesites */
+    height: auto;
+    padding-bottom: 0%;
+    padding-top: 0%;
+}
+
+.in-carlos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0; 
+    width: 100vw;
+}
+
+.in-carlos img {
+    width: 100%;
+    height: 50vw; 
+    object-fit: cover;
+    display: block;
+}
+
+.in-carlos2 img{
+    height: 25vw;
+}
+
+.in-boka img {
+    padding-top: 8%;
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+
+.in-pb img {
+    padding-top: 8%;
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+
+.in-otros img {
+    padding-top: 8%;
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+
+.boton {
+    position: fixed; /*Lo deja anclado en la pantalla*/
+    bottom: 30px; /*Separacion por debajo*/
+    left: 50%; /*Separación por la izquierda*/
+    transform: translateX(-50%); /*Centrarlo perfectamente*/
+    z-index: 9999; /* Un número muy alto para que nada le pase por encima */
+    pointer-events: auto; /* Asegura que los clics funcionen siempre */
+}
+
+.boton-volver {
+    display: flex; /*Alinea los elementos horizontalmente*/
+    gap: 20px; /*Separa los iconos entre si*/
+    background-color: #F2F4F3; /*Color de fondo*/
+    backdrop-filter: blur(10px); /*Desenfoca ligeramente lo que hay detras*/
+    padding: 12px 25px; /*Espacio interno arriba, abajo y por los lados*/
+    border-radius: 50px; /*Redondea los bordes*/
+    border: 1px solid #49111C; /*Añade un borde fino con ese color*/
+    box-shadow: 0 1px 10px #49111C; /*Proyecta una sombra suave de ese color*/
+}
+
+.volver-atras {
+    text-decoration: none; /*Quita el subrayado por defecto*/
+    font-size: 12px; /*Tamaño*/
+    font-weight: 600; /*Grosor de fuente negrita*/
+    color: #49111C; /*Color que aplicamos*/
+    text-transform: uppercase; /*Convierte el texto en mayusculas*/
+    transition: 0.3s; /*Transicion de suavizado del raton*/
+}
+
+.volver-atras:hover {
+    color: #49111C; /*Color que aplicamos*/
+    transform: translateY(-2px); /*Salta 2px hacia arriba*/
+}
