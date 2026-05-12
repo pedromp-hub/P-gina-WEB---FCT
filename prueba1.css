@@ -296,6 +296,15 @@ body {
     }
 }
 
+.gastronomia{
+    padding-bottom: 3%;
+    padding-top: 3%;
+    color:#F5F5DC;
+    background-color: #49111C;
+    justify-content: center;
+    text-align: center;
+}
+
 .cueva {
     width: 100%;
     padding-top: 3%;
@@ -324,7 +333,7 @@ body {
 .in-cueva img {
     width: 100%;
     /* Altura proporcional: 1/3 del ancho de la pantalla para que sean cuadradas */
-    height: 33vw; 
+    height: 50vw; 
     object-fit: cover; /* Evita que las fotos de comida se deformen */
     display: block;
 }
@@ -335,46 +344,42 @@ body {
     height: 40vw;       /* Un poco más alta para destacar el plato principal */
 }
 
-.zurita {
-    width: 100%;
-    padding-bottom: 1%;
-    text-align: center;
-}
-
-.zurita .logo {
-    display: block;    /* Permite usar márgenes automáticos */
-    margin: 0 auto;    /* Centra horizontalmente */
-    width: 300px;      /* Ajusta el tamaño según necesites */
-    height: auto;
-    padding-bottom: 1%;
-}
-
-.in-zurita {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0; 
-    width: 100vw;
-}
-
 .in-zurita img {
-    width: 100%;
-    height: 33vw; 
+    width: 100%; 
     object-fit: cover;
     display: block;
+    height: auto;
+    padding-bottom: 0%;
+}
+
+.in-mostaza img {
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+
+.in-bambola img {
+    padding-top: 2%;
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: auto;
 }
 
 .carlos-ferreiro {
     width: 100%;
-    padding-bottom: 1%;
+    padding-bottom: 0%;
     text-align: center;
 }
 
 .carlos-ferreiro .logo {
     display: block;    /* Permite usar márgenes automáticos */
     margin: 0 auto;    /* Centra horizontalmente */
-    width: 300px;      /* Ajusta el tamaño según necesites */
+    width: 500px;      /* Ajusta el tamaño según necesites */
     height: auto;
-    padding-bottom: 1%;
+    padding-bottom: 0%;
+    padding-top: 0%;
 }
 
 .in-carlos {
@@ -386,13 +391,37 @@ body {
 
 .in-carlos img {
     width: 100%;
-    height: 33vw; 
+    height: 50vw; 
     object-fit: cover;
     display: block;
 }
 
 .in-carlos2 img{
-    height: 16.5vw;
+    height: 25vw;
+}
+
+.in-boka img {
+    padding-top: 8%;
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+
+.in-pb img {
+    padding-top: 8%;
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+
+.in-otros img {
+    padding-top: 8%;
+    width: 100%; 
+    object-fit: cover;
+    display: block;
+    height: auto;
 }
 
 #pruebas{
