@@ -121,9 +121,6 @@ body {
   grid-row: span 2;
 }
 
-/* Ocasionalmente, una foto "héroe" que ocupe gran parte de la pantalla */
-
-
 /* Efecto hover elegante */
 .galeria img:hover {
   transform: translateY(-5px);
