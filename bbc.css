@@ -1,0 +1,114 @@
+@font-face { /*Importar fuente externa*/
+    font-family: 'FantasmAndSecret'; /*Nombre interno de la fuente*/
+    src: url('Fantasm and Secrets.ttf') format('truetype'); /*Ruta donde esta guardado el archivo y especifica el formato*/
+    font-weight: normal; /*Usara grosol normal*/
+    font-style: normal; /*Fuente versión estandar*/
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    margin: 0; /*Elimina espacio exterior (Margen)*/
+    padding: 0; /*Elimina espacio interior*/
+    box-sizing: border-box; /*Ancho y largo de un elemento incluya bordes y relleno*/
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /*Aplicamos la fuente*/
+    font-weight: 700; /*Grosor de fuente negrita*/
+    background-color: #F2F4F3; /*Color de fondo*/
+    color: #49111C; /*Color del texto*/
+    line-height: 1.2; /*Altura entre lineas*/
+    -webkit-font-smoothing: antialiased; /*Para que las fuentes se vean mas nitidas y suaves*/
+    letter-spacing: -0.02em; /*Espacio entre letras*/
+}
+
+.tittle {
+    background-color: #49111C;
+    color: #F5F5DC;
+    justify-content: center;
+    text-align: center;
+    /* Añadimos un poco más de espacio abajo para que la tarjeta tenga donde apoyarse */
+    padding-bottom: 80px; 
+}
+
+.tittle h1 {
+    padding-bottom: 3%;
+    padding-top: 3%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 3rem;
+}
+
+.information {
+    /* Mantenemos tus estilos */
+    justify-content: center;
+    text-align: center;
+    color: black;
+    padding-top: 2%;
+    
+    /* Añadimos el bloque */
+    background-color: white;
+    max-width: 900px;        /* Ancho del bloque */
+    margin: -60px auto 0;    /* Esto hace que el bloque suba sobre el granate */
+    padding: 40px;           /* Espacio interno para que no pegue a los bordes */
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1); /* Sombra suave para el efecto de bloque */
+}
+
+#flecha{
+    padding-top: 3%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #49111C;
+    animation: botar 2s infinite;
+}
+
+@keyframes botar {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posición original */
+    }
+    40% {
+        transform: translateY(-20px); /* Salto hacia arriba */
+    }
+    60% {
+        transform: translateY(-10px); /* Segundo salto más pequeño */
+    }
+}
+
+
+
+.boton {
+    position: fixed; /*Lo deja anclado en la pantalla*/
+    bottom: 30px; /*Separacion por debajo*/
+    left: 50%; /*Separación por la izquierda*/
+    transform: translateX(-50%); /*Centrarlo perfectamente*/
+    z-index: 9999; /* Un número muy alto para que nada le pase por encima */
+    pointer-events: auto; /* Asegura que los clics funcionen siempre */
+}
+
+.boton-volver {
+    display: flex; /*Alinea los elementos horizontalmente*/
+    gap: 20px; /*Separa los iconos entre si*/
+    background-color: #F2F4F3; /*Color de fondo*/
+    backdrop-filter: blur(10px); /*Desenfoca ligeramente lo que hay detras*/
+    padding: 12px 25px; /*Espacio interno arriba, abajo y por los lados*/
+    border-radius: 50px; /*Redondea los bordes*/
+    border: 1px solid #49111C; /*Añade un borde fino con ese color*/
+    box-shadow: 0 1px 10px #49111C; /*Proyecta una sombra suave de ese color*/
+}
+
+.volver-atras {
+    text-decoration: none; /*Quita el subrayado por defecto*/
+    font-size: 12px; /*Tamaño*/
+    font-weight: 600; /*Grosor de fuente negrita*/
+    color: #49111C; /*Color que aplicamos*/
+    text-transform: uppercase; /*Convierte el texto en mayusculas*/
+    transition: 0.3s; /*Transicion de suavizado del raton*/
+}
+
+.volver-atras:hover {
+    color: #49111C; /*Color que aplicamos*/
+    transform: translateY(-2px); /*Salta 2px hacia arriba*/
+}
